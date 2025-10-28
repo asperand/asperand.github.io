@@ -1,7 +1,7 @@
 main();
 
 function main() {
-  const canvas = document.querySelector("#bg");
+  const canvas = document.querySelector("#bg-canvas");
   const gl = canvas.getContext("webgl");
   if (gl == null){
     alert("Your browser does not support WebGL :(");
