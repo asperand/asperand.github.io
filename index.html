@@ -25,7 +25,19 @@
 <body>
 
   <canvas id="bg-canvas"></canvas>
-  <script src="bg.js" type="module"></script>
+  <script type="module">
+    main();
+    function main() {
+      const canvas = document.querySelector("#bg-canvas");
+      const gl = canvas.getContext("webgl");
+      if (gl == null){
+        alert("Your browser does not support WebGL :(");
+        return;
+      }
+      gl.clearColor(0.0,0.0,0.0,1.0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+    }
+  </script>
 
 </body>
 
